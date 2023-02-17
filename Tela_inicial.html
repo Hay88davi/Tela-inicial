@@ -46,26 +46,25 @@
         {transform: rotate(360deg);}
        }
 
-       
 
-       .container .Ring::before
-       {
-        content: '';
-        position: absolute;
-        width: 15px;
-        top: 12px;
-        right: 12px;
-        height: 15px;
-        border-radius: 75%;
-        background: #24ecff;
-        box-shadow: 0 0 0 5px #24ecff55,0 0 0 10px #24ecff45,0 0 0 15px #24ecff25;
-
-       }
-       .container .Ring:nth-child(2)
+          .container .Ring:nth-child(2)
        {
         animation: anima2 4s linear infinite;
        }
       
+       .container .Ring:nth-child(1)::before
+       {
+        content: '';
+        position: absolute;
+        width: 15px;
+        bottom: 12px;
+        left: 12px;
+        height: 15px;
+        border-top: #24ecff;
+        border-radius: 75%;
+        background: #24ecff;
+        box-shadow: 0 0 0 5px #24ecff55,0 0 0 10px #24ecff45,0 0 0 15px #24ecff25;
+       }
        .container .Ring:nth-child(2)::before
        {
         content: '';
@@ -85,7 +84,33 @@
         100%
         {transform: rotate(-360deg);}
        }
-       
+       .container .Ring:nth-child(3)
+       {
+        position: absolute;
+        top: -50px;
+        animation: anima3 4s infinite linear;
+        animation-delay: -1s;
+        
+       }
+       @keyframes anima3
+       {
+        0%
+        {transform: rotate(0deg);}
+        100%
+        {transform: rotate(-360deg);}
+       }
+       .container .Ring:nth-child(3)::before
+       {
+        content: '';
+        position: absolute;
+        width: 15px;
+        bottom: 12px;
+        left: 12px;
+        height: 15px;
+        border-radius: 75%;
+        background: #d52dff;
+        box-shadow: 0 0 0 5px #d52dff55,0 0 0 10px #d52dff45,0 0 0 15px #d52dff25;
+       }
        .container p
        {
         position: absolute;
@@ -99,6 +124,7 @@
 </head>
 <body>
     <div class="container">
+        <div class="Ring"></div>
         <div class="Ring"></div>
         <div class="Ring"></div>
         <p>Loading...</p>
